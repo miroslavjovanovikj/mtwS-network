@@ -1,0 +1,244 @@
+nav.navbar.navbar-default {
+  background-color: transparent;
+  height: 70px;
+  border: 1.2px solid black;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed', sans-serif;
+      padding-top: 7px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 0;
+        width: 100%
+
+}
+nav.navbar.navbar-default a{
+  color:black;
+}
+nav.navbar.navbar-default a:hover{
+  color:#214c87;
+}
+
+.navbar-brand
+{
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: larger;
+}
+ /* .forumTitle{
+  text-align: center;
+  text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 31px;
+    margin-top: 20px;
+    color: #330066;
+} */
+.onePostTitle{
+  text-align: center;
+  padding: 22px;
+  background: #392B58;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+.date{
+  background-color: #FFB300;
+  width:100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  padding: 31px;
+  float:left;
+  font-family: 'Oswald', sans-serif;
+}
+div.col-md-10.col-sm-10.paddingHeaderTitle{
+  padding-left: 0;
+}
+div.col-md-2.col-sm-2.padingHeader{
+  padding-right: 0;
+}
+.discussion{
+    height:70px;
+    border:2px solid #9BA2A8;
+    text-align: center;
+      margin-bottom: 55px;
+      font-family: 'Oswald', sans-serif;
+      color: #08355F;
+      font-size: 17px;
+      padding: 33px;
+      border-top: 0;
+}
+.discussionInfo{
+  border:2px solid #9BA2A8;
+  text-align: center;
+  margin-bottom: 55px;
+  height:70px;
+}
+div.col-md-10.col-sm-10.paddingBody{
+  padding-left: 0;
+
+}
+.paddingBodyInfo{
+  padding-right:0;
+
+}
+.buttonIcon{
+  text-align: center;
+  margin-bottom: 120px;
+  margin-top: 180px;
+}
+i.plus{
+  font-size: 75px;
+  color: #37A829;
+}
+.discussionShow{
+  height: 120px;
+  border:1px solid gray;
+  text-align: center;
+  font-size: 23px;
+  font-family: 'Oswald', sans-serif;
+  border-top: none;
+
+}
+.discussionInfo{
+  border-right: 0;
+  border-top:0;
+}
+.showPostTitle{
+  float:left;
+  padding: 22px;
+  background: #392B58;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  border-right: 1px solid #FFB300;
+}
+.buttonsShow{
+  float:right;
+  background-color: #392B58;
+  text-align: right;
+  height: 79px;
+}
+.textDec{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.stylingButt{
+  border:none;
+  background: none;
+}
+i.fa-trash-alt{
+  font-size: 35px;
+  color: red;
+  padding-top: 15px;
+  padding-right: 20px;
+}
+.editButton{
+  float:right;
+}
+i.fa-pen-square{
+  font-size: 39px;
+  color: white;
+  padding-top: 15px;
+  padding-right: 9px;
+}
+
+.selecMenu{
+  text-align: center;
+  height: 70px;
+    font-size: 27px;
+
+}
+select.channel{
+  height: 220px;
+  width:360px;
+  text-align: center;
+  background-color:white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+color: #330066;
+  border:none;
+  outline:none;
+   overflow: hidden;
+}
+select.channel:hover{
+  height: 220px;
+  width:360px;
+  text-align: center;
+  background-color:white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+color: #330066;
+  border:none;
+}
+.buttonSelect {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 11px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width:100%;
+}
+.buttonSelectDisp{
+  text-align: center;
+  margin-top: 130px;
+
+}
+.watch{
+  font-size: 11px;
+  color:red;
+}
+i.fa-eye{
+  color:#82C91E;
+  font-size: 37px;
+  float:left;
+  padding-top: 15px;
+
+  padding-right: 35px;
+}
+.divEye{
+  padding-left: 0;
+}
+.marginDiscuss{
+  margin-top: 90px;
+}
+.userDiscuss{
+  padding-right: 0;
+}
+.usernameDiscuss{
+  text-align:center;
+  padding: 8px;
+  color: white;
+  background-color:  #FFB300;
+  height:79px;
+}
+.replayLi:nth-child(odd){
+  list-style:none;
+  font-size: 23px;
+  background-color: red;
+  padding-left: 5px;
+  width: 100%;
+}
+.replayLi{
+  list-style:none;
+  font-size: 23px;
+    width: 100%;
+
+}
+.replayAuthor{
+  text-transform: uppercase;
+}
+.proba{
+  padding-right: 0;
+}

@@ -1,0 +1,16 @@
+<% include ../partials/headerMsn%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="createPost">Edit <%=updatePost.title%></h1>
+      <form  action="/forum/<%=updatePost._id%>?_method=PUT" method="POST">
+          <input class="form-control"type="text" name="forum[title]" placeholder="Title" value="<%=updatePost.title%>">
+          <textarea class="form-control"type="text" name="forum[content]" placeholder="Text" rows="10" cols="100"><%=updatePost.content%></textarea>
+          <button class="forumButton">Create</button>
+          
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer%>

@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<h1 class="indexH1">Edit: <%= editPost.title %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form action="/bikes/<%=editPost._id%>?_method=PUT"enctype="multipart/form-data" method="POST">
+          <input class="form-control" type="text" name="newPost[title]" value="<%= editPost.title %>">
+          <input class="form-control" type="text" name="newPost[headimg]" value="<%=editPost.headimg%>">">
+
+          <div class="form-group upload-area">
+            <label for="exampleFormControlFile1">Click Here To upload Files</label>
+            <input type="file" name="newPost[image]" class="form-control-file" value="<%= editPost.image %>id="exampleFormControlFile1">
+          </div>
+          <input class="form-control" type="text" name="newPost[text]" value=" <%= editPost.text %>">
+          <button class="form-control btn btn-success">Submit</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>

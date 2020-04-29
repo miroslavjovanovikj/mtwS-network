@@ -1,0 +1,59 @@
+<% include ../partials/headerForum%>
+  <div class="container containerPading">
+<div class="marginDiscuss">
+  <div class="row">
+    <div class="col-md-2 col-sm-2 col-xs-2 userDiscuss">
+      <div class="usernameDiscuss">
+        <h5><%=findDiscuss.forumAuthor.name%></h5>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-7 textDec">
+        <h4 class="showPostTitle"><%= findDiscuss.title%></h4>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3 buttonsShow">
+        <div class="col-md-8  col-sm-8 proba">
+          <%if(currentUser && findDiscuss.forumAuthor.id.equals(currentUser._id)){%>
+              <a class="editButton"href="/forum/<%=findDiscuss._id%>/edit"><i class="fas fa-pen-square"></i></a>
+              <form action="/forum/<%= findDiscuss._id%>?_method=DELETE" method="POST">
+                <div class="buttonStyl">
+                  <button class="stylingButt"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </form>
+
+          <%} else{%>
+
+          <%}%>
+
+        </div>
+        <div class="col-md-3 col-sm-3 divEye ">
+              <a class="watcherEye" href="/forum/<%=findDiscuss._id%>/watchers"><i class="fas fa-eye"></i></a>
+        </div>
+    </div>
+  </div>
+</div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 showContent">
+        <div class="discussionShow">
+            <p><%= findDiscuss.content%></p>
+          </div>
+      </div>
+
+    </div>
+
+    <% findDiscuss.replays.forEach(function(oneReplay){%>
+
+          <li class="replayLi">
+            <span class="replayAuthor"><%=oneReplay.replayAuthor.name %></span> <%=oneReplay.replay%>
+          </li>
+
+
+            <%if(currentUser && oneReplay.replayAuthor.id.equals(currentUser._id)){%>
+        <a href="/forum/<%=findDiscuss._id%>/replays/<%=oneReplay._id%>/edit">edit</a>
+        <form action="/forum/<%=findDiscuss._id%>/replays/<%=oneReplay._id%>?_method=DELETE"method="POST">
+          <button>del</button>
+        </form>
+        <%}%>
+    <%})%>
+      <a href="/forum/<%=findDiscuss._id%>/replays/new">Replay</a>
+    </div>
+<% include ../partials/footer%>

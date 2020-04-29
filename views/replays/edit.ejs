@@ -1,0 +1,16 @@
+<% include ../partials/headerMsn%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+      <form  action="/forum/<%=replay_id%>/replays/<%=replays._id%>?_method=PUT" method="POST">
+          <!-- <input class="form-control"type="text" name="content[replay]" placeholder="Author"> -->
+          <input class="form-control"type="text" name="content[replay]" value="<%=replays.replay%>">
+          <!-- <textarea class="form-control"type="text" name="content[replay]" placeholder="Text" rows="10" cols="100"><%=replays.replay%></textarea> -->
+          <button class="forumButton">Create</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer%>

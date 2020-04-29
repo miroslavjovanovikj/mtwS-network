@@ -1,0 +1,65 @@
+
+<% include ../partials/headerForum%>
+
+<div class="container">
+
+    <form  action="/channel" method="post">
+    <div class="selecMenu">
+      <select class="channel"  name="channel" multiple="multiple">
+              <option value="none" selected>All posts</option>
+              <option value="fix">How to fix</option>
+              <option value="replace">how to replace</option>
+              <option value="bay">what to bay</option>
+              <option value="health">food and health</option>
+      </select>
+    </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 buttonSelectDisp">
+          <button class="buttonSelect">Search</button>
+    </div>
+  </div>
+    </form>
+       <div class="buttonIcon">
+         <a href="/forum/new">
+            <div class="plusDiv">
+                <i class="fas fa-plus plus"></i>
+             </div>
+         </a>
+      </div>
+
+  <%forumPost.forEach(function(posts){%>
+
+        <div class="row" >
+          <a href="/forum/<%= posts._id%>">
+            <div class="col-md-2 col-sm-2 col-xs-2 padingHeader ">
+              <div class="date">
+                <%= posts.forumAuthor.name%>
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-10 paddingHeaderTitle">
+                  <h4 class="onePostTitle"><%= posts.title%>
+                  </h4>
+            </div>
+          </a>
+
+        </div>
+        <div class="row">
+            <a href="/forum/<%= posts._id%>">
+              <div class="col-md-2 col-sm-2 col-xs-2 paddingBodyInfo">
+                <div class="discussionInfo"></div>
+              </div>
+              <div class="col-md-10 col-sm-10  col-xs-10 paddingBody">
+                <div class="discussion">
+                    <p class="content"><%= posts.content%></p>
+                </div>
+              </div>
+            </a>
+        </div>
+  <%}) %>
+</div>
+
+<form class="" action="/forum" method="post">
+    <input type="button" name="like" value="1">
+</form>
+<% include ../partials/footer%>
+<!-- <span class="watch" ><input type="checkbox" name="watch" value="watch">watch</span> -->
